@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+}
+
+.header-banner {
+	background: linear-gradient(90deg, rgba(0,229,145,1) 0%, rgba(47,239,188,1) 100%);
+	color: white;
+	font: 2em Arial, sans-serif;
+	padding: 15px;
+}
+
+#root {
+	display: flex;
+	margin: 80px calc(50% - 400px);
+	width: 800px;
+}
+
+.shopping-list {
+	border: 2px solid #d3d3d3;
+	min-height: 200px;
+	width: 300px;
+}
+
+.shopping-list .list-header {
+	background: linear-gradient(90deg, rgba(0,229,145,1) 0%, rgba(47,239,188,1) 100%);
+	color: white;
+	font: 20px Arial, sans-serif;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.item {
+	border-bottom: 2px solid #d3d3d3;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 10px;
+}
+
+.item input[type="checkbox"] {
+	width: 15px;
+}
+
+.item .name {
+	border: none;
+	color: #999999;
+	width: 100%;
+}
+
+.item .close-button {
+	color: red;
+	cursor: pointer;
+	float: right;
+	font-family: sans-serif;
+	opacity: 0;
+}
+
+.item.active .name {
+	color: black;
+}
+
+.item.active .close-button, .item.checked .close-button {
+	opacity: 1;
+}
+
+.item.checked .name {
+	text-decoration: line-through black;
+}
+
+.addItemBox {
+	border-bottom: 2px solid #d3d3d3;
+	display: flex;
+	padding: 3px 0;
+}
+
+.addItemBox input[name="addItem"] {
+	border: none;
+	margin-left: 30px;
+	width: 100%;
+}
